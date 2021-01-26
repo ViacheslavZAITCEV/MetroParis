@@ -132,9 +132,11 @@ public class Metro {
 			System.out.print("votre choix: ");
 			try {
 				res = scan.nextInt();
-				if (res < 0 || res > menu.length)
-					System.out.println("Erreur: votre choix doit etre compris entre 1 et " + (menu.length));
+				if (res < 0 || res > menu.length) {
+					System.out.println("Erreur: votre choix doit etre compris entre 0 et " + (menu.length));
+				};
 			} catch (Exception e) {
+				res = -1;
 				System.out.println("Erreur: votre choix doit etre nombre entier");
 			}
 		} while (res < 0 || res > menu.length);
